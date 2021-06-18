@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h3 style="color:black;font-style:bold;text-align:center">Welcome to book store</h3>
+<br>
+<br>
+<form style="text-align:center" action={{url_for('books')}} method=post>
+<input type=text name=name placeholder="book name" required=required>
+<input type=text name=author placeholder="author name"  required=required>
+<input type=text name=link placeholder="paste link"  required=required>
+<input type=submit name=submit value="add book">
+</form>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<style>
+body{
+background-color:cyan
+}
+body{
+text-align:center
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Book Store</span>
+     <a style="color:white" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'" class="nav-link" href="/">Add book</a><a style="color:white" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'"  class="nav-link" href="/updatebooks">update book</a>
+    
+</nav>
+<br>
+<br>
+<br>
+
+{% block body %}
+
+{% endblock %}
+
+</body>
+
+
+</html>
