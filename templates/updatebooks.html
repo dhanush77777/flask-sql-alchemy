@@ -5,13 +5,16 @@
 {% for book in books  %}
 <form action="/update" method="POST">
 <input type="hidden"  value="{{book.name}}" name="oldname">
- Book name : <input type="text"  value="{{book.name}}" name="newname">
- Author name :  <input type="text"  value="{{book.author}}" name="newauthor">
- book link : <input type="text"  value="{{book.link}}" name="newlink">
+ Book name : <input type="text"  value="{{book.name}}" name="newname"><br>
+ <br>
+ Author name :  <input type="text"  value="{{book.author}}" name="newauthor"><br>
+ <br>
+ book link : <input type="text"  value="{{book.link}}" name="newlink"><br>
+ <br>
  <input type="submit" value="update" >
 </form>  
 <form action="/delete" method="POST">
-<input type="hidden" value="{{book.name}}" name="name">
+<input type="hidden" value="{{book.name}}" name="name"><br>
 <input type="submit" value="delete">
 </form>
 
