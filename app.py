@@ -5,6 +5,8 @@ project_dir=os.path.dirname(os.path.abspath(__file__))
 database_file= "sqlite:///{}".format(os.path.join(project_dir,"mydatabase2.db"))
 app=Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"]= os.environ.get("DATABASE_URL")
+#database url from render is 
+#postgresql://flask_sample_user:hMkEvzF7WIeAaD84A9zMPZOIEC3hlsjE@dpg-chh0t8jhp8u065sldocg-a.oregon-postgres.render.com/flask_sample
 db=SQLAlchemy(app)
 
 class Book(db.Model):
