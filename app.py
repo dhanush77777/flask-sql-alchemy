@@ -4,7 +4,7 @@ import os
 project_dir=os.path.dirname(os.path.abspath(__file__))
 database_file= "sqlite:///{}".format(os.path.join(project_dir,"mydatabase2.db"))
 app=Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"]= database_file
+app.config["SQLALCHEMY_DATABASE_URI"]= os.environ.get("DATABASE_URL")
 db=SQLAlchemy(app)
 
 class Book(db.Model):
